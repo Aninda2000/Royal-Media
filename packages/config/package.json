@@ -1,0 +1,9 @@
+{
+  "name": "@royal-media/config",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

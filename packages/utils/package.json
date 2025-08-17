@@ -1,0 +1,17 @@
+{
+  "name": "@royal-media/utils",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "zod": "^3.22.4",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "pino": "^8.17.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "typescript": "^5.2.2"
+  }
+}

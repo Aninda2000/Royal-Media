@@ -1,0 +1,66 @@
+{
+  "name": "royal-media",
+  "version": "1.0.0",
+  "description": "Royal Media - A modern social media platform",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "./dev.sh start",
+    "start": "./dev.sh start",
+    "stop": "./dev.sh stop",
+    "restart": "./dev.sh restart",
+    "build": "./dev.sh build",
+    "seed": "./dev.sh seed",
+    "logs": "./dev.sh logs",
+    "status": "./dev.sh status",
+    "clean": "./dev.sh clean",
+    "install:all": "npm install && npm run install:services && npm run install:apps",
+    "install:services": "cd apps/auth && npm install && cd ../posts && npm install && cd ../..",
+    "install:apps": "cd apps/web && npm install && cd ../..",
+    "build:all": "npm run build:services && npm run build:apps",
+    "build:services": "cd apps/auth && npm run build && cd ../posts && npm run build && cd ../..",
+    "build:apps": "cd apps/web && npm run build && cd ../..",
+    "test": "npm run test:services && npm run test:apps",
+    "test:services": "cd apps/auth && npm test && cd ../posts && npm test && cd ../..",
+    "test:apps": "cd apps/web && npm test && cd ../..",
+    "lint": "npm run lint:services && npm run lint:apps",
+    "lint:services": "cd apps/auth && npm run lint && cd ../posts && npm run lint && cd ../..",
+    "lint:apps": "cd apps/web && npm run lint && cd ../..",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build"
+  },
+  "keywords": [
+    "social-media",
+    "microservices",
+    "nodejs",
+    "typescript",
+    "nextjs",
+    "mongodb",
+    "redis"
+  ],
+  "author": "Royal Media Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/royal-media/royal-media.git"
+  },
+  "bugs": {
+    "url": "https://github.com/royal-media/royal-media/issues"
+  },
+  "homepage": "https://github.com/royal-media/royal-media#readme"
+}
